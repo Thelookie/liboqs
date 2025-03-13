@@ -29,7 +29,7 @@ if(OQS_ENABLE_KEM_paloma_128)
         ${CMAKE_CURRENT_LIST_DIR}/paloma_128
         ${PROJECT_SOURCE_DIR}/src/common/pqclean_shims
     )
-    target_compile_options(paloma_128 PUBLIC -DPALOMA_SECURITY_LEVEL=128)
+    target_compile_options(paloma_128 PUBLIC -DPALOMA_SECURITY_LEVEL=128 -Wl,--allow-multiple-definition)
     set(_PALOMA_OBJS ${_PALOMA_OBJS} $<TARGET_OBJECTS:paloma_128>)
 endif()
 
@@ -41,19 +41,19 @@ if(OQS_ENABLE_KEM_paloma_192)
         ${CMAKE_CURRENT_LIST_DIR}/paloma_192
         ${PROJECT_SOURCE_DIR}/src/common/pqclean_shims
     )
-    target_compile_options(paloma_192 PUBLIC -DPALOMA_SECURITY_LEVEL=192)
+    target_compile_options(paloma_192 PUBLIC -DPALOMA_SECURITY_LEVEL=192 -Wl,--allow-multiple-definition)
     set(_PALOMA_OBJS ${_PALOMA_OBJS} $<TARGET_OBJECTS:paloma_192>)
 endif()
 
 # paloma_256 configuration
 if(OQS_ENABLE_KEM_paloma_256)
-    add_library(paloma_256 OBJECT kem_paloma_256.c ${COMMON_SRC_FILES})
+    add_library(paloma_256 OBJECT kem_paloma_256.c ${COMMON_SRC_FILES} )
     target_include_directories(paloma_256 PRIVATE 
         ${CMAKE_CURRENT_LIST_DIR}/paloma_common
         ${CMAKE_CURRENT_LIST_DIR}/paloma_256
         ${PROJECT_SOURCE_DIR}/src/common/pqclean_shims
     )
-    target_compile_options(paloma_256 PUBLIC -DPALOMA_SECURITY_LEVEL=256)
+    target_compile_options(paloma_256 PUBLIC -DPALOMA_SECURITY_LEVEL=256 -Wl,--allow-multiple-definition)
     set(_PALOMA_OBJS ${_PALOMA_OBJS} $<TARGET_OBJECTS:paloma_256>)
 endif()
 

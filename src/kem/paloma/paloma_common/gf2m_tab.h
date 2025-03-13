@@ -3,6 +3,6 @@
 
 #include "gf2m.h"
 
-extern gf2m_tab g_gf2m_tabs;
+static gf2m_tab g_gf2m_tabs;
 
 #endif /* GF2M_TABLE_H */

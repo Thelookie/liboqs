@@ -433,27 +433,24 @@ OQS_API OQS_KEM *OQS_KEM_new(const char *method_name) {
 #else
 		return NULL;
 #endif
-
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ml_kem_1024)) {
 #ifdef OQS_ENABLE_KEM_ml_kem_1024
 		return OQS_KEM_ml_kem_1024_new();
 #else
 		return NULL;
-
+#endif
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_paloma_128)) {	
 #ifdef OQS_ENABLE_KEM_paloma_128
 		return OQS_KEM_paloma_128_new();
 #else
 		return NULL;
 #endif
-
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_paloma_192)) {
 #ifdef OQS_ENABLE_KEM_paloma_192
 		return OQS_KEM_paloma_192_new();
 #else
 		return NULL;
 #endif
-
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_paloma_256)) {
 #ifdef OQS_ENABLE_KEM_paloma_256
 		return OQS_KEM_paloma_256_new();
