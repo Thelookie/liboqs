@@ -76,6 +76,12 @@ extern "C" {
 #define OQS_KEM_alg_ml_kem_768 "ML-KEM-768"
 /** Algorithm identifier for ML-KEM-1024 KEM. */
 #define OQS_KEM_alg_ml_kem_1024 "ML-KEM-1024"
+/** Algorithm identifier for Paloma-128 KEM. */
+#define OQS_KEM_alg_paloma_128 "Paloma-128"
+/** Algorithm identifier for Paloma-192 KEM. */
+#define OQS_KEM_alg_paloma_192 "Paloma-192"
+/** Algorithm identifier for Paloma-256 KEM. */
+#define OQS_KEM_alg_paloma_256 "Paloma-256"	
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALG_IDENTIFIER_END
 /** Algorithm identifier for sntrup761 KEM. */
 #define OQS_KEM_alg_ntruprime_sntrup761 "sntrup761"
@@ -277,8 +283,11 @@ OQS_API void OQS_KEM_free(OQS_KEM *kem);
 #include <oqs/kem_kyber.h>
 #endif /* OQS_ENABLE_KEM_KYBER */
 #ifdef OQS_ENABLE_KEM_ML_KEM
-#include <oqs/kem_ml_kem.h>
+#include <oqs/kem_ml_kem.h>		
 #endif /* OQS_ENABLE_KEM_ML_KEM */
+#ifdef OQS_ENABLE_KEM_PALOMA
+#include <oqs/kem_paloma.h>
+#endif /* OQS_ENABLE_KEM_PALOMA */
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_INCLUDE_END
 #ifdef OQS_ENABLE_KEM_NTRUPRIME
 #include <oqs/kem_ntruprime.h>

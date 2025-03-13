@@ -142,6 +142,18 @@
 #cmakedefine OQS_ENABLE_KEM_ml_kem_1024_aarch64 1
 #cmakedefine OQS_ENABLE_KEM_ml_kem_1024_cuda 1
 
+#cmakedefine OQS_ENABLE_KEM_PALOMA 1
+#cmakedefine OQS_ENABLE_KEM_paloma_128 1
+#cmakedefine OQS_ENABLE_KEM_paloma_128_avx2 1
+#cmakedefine OQS_ENABLE_KEM_paloma_192 1
+#cmakedefine OQS_ENABLE_KEM_paloma_192_avx2 1
+#cmakedefine OQS_ENABLE_KEM_paloma_256 1
+#cmakedefine OQS_ENABLE_KEM_paloma_256_avx2 1 
+#cmakedefine OQS_ENABLE_KEM_paloma_128_x86_64 1
+#cmakedefine OQS_ENABLE_KEM_paloma_192_x86_64 1
+#cmakedefine OQS_ENABLE_KEM_paloma_256_x86_64 1
+
+
 #cmakedefine OQS_ENABLE_SIG_DILITHIUM 1
 #cmakedefine OQS_ENABLE_SIG_dilithium_2 1
 #cmakedefine OQS_ENABLE_SIG_dilithium_2_avx2 1

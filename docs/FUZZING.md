@@ -13,6 +13,7 @@ errors, helping developers identify and fix bugs and security loopholes.
   - [ ] hqc
   - [ ] kyber
   - [ ] ml_kem
+  - [ ] paloma
   - [ ] ntruprime
 - [ ] sig
   - [x] dilithium

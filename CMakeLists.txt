@@ -246,6 +246,11 @@ endif()
 if(OQS_ENABLE_KEM_ML_KEM)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/ml_kem/kem_ml_kem.h)
 endif()
+if(OQS_ENABLE_KEM_PALOMA)
+    set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/paloma/kem_paloma.h)
+endif()
+
+
 if(OQS_ENABLE_SIG_DILITHIUM)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig/dilithium/sig_dilithium.h)
 endif()
@@ -267,6 +272,8 @@ endif()
 if(OQS_ENABLE_SIG_UOV)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig/uov/sig_uov.h)
 endif()
+
+
 ##### OQS_COPY_FROM_UPSTREAM_FRAGMENT_INCLUDE_HEADERS_END
 if(OQS_ENABLE_SIG_STFL_XMSS)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig_stfl/xmss/sig_stfl_xmss.h)
