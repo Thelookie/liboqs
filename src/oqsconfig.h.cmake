@@ -153,6 +153,17 @@
 #cmakedefine OQS_ENABLE_KEM_paloma_192_x86_64 1
 #cmakedefine OQS_ENABLE_KEM_paloma_256_x86_64 1
 
+#cmakedefine OQS_ENABLE_KEM_SMAUGT 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_128 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_128_avx2 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_192 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_192_avx2 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_256 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_256_avx2 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_128_x86_64 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_192_x86_64 1
+#cmakedefine OQS_ENABLE_KEM_smaugt_256_x86_64 1
+    
 
 #cmakedefine OQS_ENABLE_SIG_DILITHIUM 1
 #cmakedefine OQS_ENABLE_SIG_dilithium_2 1

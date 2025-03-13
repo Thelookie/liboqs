@@ -14,6 +14,7 @@ errors, helping developers identify and fix bugs and security loopholes.
   - [ ] kyber
   - [ ] ml_kem
   - [ ] paloma
+  - [ ] smaugt
   - [ ] ntruprime
 - [ ] sig
   - [x] dilithium

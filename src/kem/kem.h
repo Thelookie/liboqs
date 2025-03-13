@@ -82,8 +82,14 @@ extern "C" {
 #define OQS_KEM_alg_paloma_192 "Paloma-192"
 /** Algorithm identifier for Paloma-256 KEM. */
 #define OQS_KEM_alg_paloma_256 "Paloma-256"	
+/** Algorithm identifier for SMAUG-128 KEM. */	
+#define OQS_KEM_alg_smaugt_128 "SMAUG-128"
+/** Algorithm identifier for SMAUG-192 KEM. */
+#define OQS_KEM_alg_smaugt_192 "SMAUG-192"
+/** Algorithm identifier for SMAUG-256 KEM. */
+#define OQS_KEM_alg_smaugt_256 "SMAUG-256"
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALG_IDENTIFIER_END
-/** Algorithm identifier for sntrup761 KEM. */
+/** Algorithm identifier for sntruprime_sntrup761 KEM. */
 #define OQS_KEM_alg_ntruprime_sntrup761 "sntrup761"
 /** Algorithm identifier for FrodoKEM-640-AES KEM. */
 #define OQS_KEM_alg_frodokem_640_aes "FrodoKEM-640-AES"
@@ -101,7 +107,7 @@ extern "C" {
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_START
 
 /** Number of algorithm identifiers above. */
-#define OQS_KEM_algs_length 32
+#define OQS_KEM_algs_length 35
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_END
 
 /**
@@ -288,6 +294,9 @@ OQS_API void OQS_KEM_free(OQS_KEM *kem);
 #ifdef OQS_ENABLE_KEM_PALOMA
 #include <oqs/kem_paloma.h>
 #endif /* OQS_ENABLE_KEM_PALOMA */
+#ifdef OQS_ENABLE_KEM_SMAUGT
+#include <oqs/kem_smaugt.h>
+#endif /* OQS_ENABLE_KEM_SMAUGT */	
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_INCLUDE_END
 #ifdef OQS_ENABLE_KEM_NTRUPRIME
 #include <oqs/kem_ntruprime.h>

@@ -249,6 +249,9 @@ endif()
 if(OQS_ENABLE_KEM_PALOMA)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/paloma/kem_paloma.h)
 endif()
+if(OQS_ENABLE_KEM_SMAUGT)
+    set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/smaugt/kem_smaugt.h)
+endif()
 
 
 if(OQS_ENABLE_SIG_DILITHIUM)
