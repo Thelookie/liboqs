@@ -12,6 +12,7 @@
  *                (a structure composed of (vector s, t, vector negstart))
  **************************************************/
 void crypto_kem_keypair(uint8_t *pk, uint8_t *sk) {
+    printf("cypto keypair in avx2\n");
     indcpa_keypair(pk, sk);
     randombytes(sk + PKE_SECRETKEY_BYTES, T_BYTES);
     for (int i = 0; i < PUBLICKEY_BYTES; i++)

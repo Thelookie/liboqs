@@ -13,7 +13,6 @@
  *                (a structure composed of (vector s, t, vector negstart))
  **************************************************/
 int crypto_kem_keypair(uint8_t *pk, uint8_t *sk) {
-
     indcpa_keypair(pk, sk);
     randombytes(sk + PKE_SECRETKEY_BYTES, T_BYTES);
     for (int i = 0; i < PUBLICKEY_BYTES; i++)

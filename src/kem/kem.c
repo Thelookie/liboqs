@@ -216,7 +216,7 @@ OQS_API int OQS_KEM_alg_is_enabled(const char *method_name) {
 		return 1;
 #else
 		return 0;
-
+#endif
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_paloma_128)) {
 #ifdef OQS_ENABLE_KEM_paloma_128
 		return 1;
@@ -254,7 +254,6 @@ OQS_API int OQS_KEM_alg_is_enabled(const char *method_name) {
 		return 1;
 #else
 		return 0;
-
 #endif
 		///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ENABLED_CASE_END
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruprime_sntrup761)) {
@@ -301,7 +300,7 @@ OQS_API int OQS_KEM_alg_is_enabled(const char *method_name) {
 #endif
 		// EDIT-WHEN-ADDING-KEM
 	} else {
-		return 0;
+	return 0;
 	}
 }
 

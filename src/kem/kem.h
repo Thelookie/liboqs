@@ -82,12 +82,12 @@ extern "C" {
 #define OQS_KEM_alg_paloma_192 "Paloma-192"
 /** Algorithm identifier for Paloma-256 KEM. */
 #define OQS_KEM_alg_paloma_256 "Paloma-256"	
-/** Algorithm identifier for SMAUG-128 KEM. */	
-#define OQS_KEM_alg_smaugt_128 "SMAUG-128"
-/** Algorithm identifier for SMAUG-192 KEM. */
-#define OQS_KEM_alg_smaugt_192 "SMAUG-192"
-/** Algorithm identifier for SMAUG-256 KEM. */
-#define OQS_KEM_alg_smaugt_256 "SMAUG-256"
+/** Algorithm identifier for SMAUGT-128 KEM. */	
+#define OQS_KEM_alg_smaugt_128 "SMAUGT-128"
+/** Algorithm identifier for SMAUGT-192 KEM. */
+#define OQS_KEM_alg_smaugt_192 "SMAUGT-192"
+/** Algorithm identifier for SMAUGT-256 KEM. */
+#define OQS_KEM_alg_smaugt_256 "SMAUGT-256"
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALG_IDENTIFIER_END
 /** Algorithm identifier for sntruprime_sntrup761 KEM. */
 #define OQS_KEM_alg_ntruprime_sntrup761 "sntrup761"

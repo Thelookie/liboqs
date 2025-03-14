@@ -477,19 +477,19 @@ endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_KEM_smaugt_128_avx2 "" ON "OQS_ENABLE_KEM_smaugt_128" OFF)
+    cmake_dependent_option(OQS_ENABLE_KEM_smaugt_128_avx2 "" OFF "OQS_ENABLE_KEM_smaugt_128" ON)
 endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_KEM_smaugt_192_avx2 "" ON "OQS_ENABLE_KEM_smaugt_192" OFF)
+    cmake_dependent_option(OQS_ENABLE_KEM_smaugt_192_avx2 "" OFF "OQS_ENABLE_KEM_smaugt_192" ON)
 endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_KEM_smaugt_256_avx2 "" ON "OQS_ENABLE_KEM_smaugt_256" OFF)
+    cmake_dependent_option(OQS_ENABLE_KEM_smaugt_256_avx2 "" OFF "OQS_ENABLE_KEM_smaugt_256" ON)
 endif()
 endif()
 
