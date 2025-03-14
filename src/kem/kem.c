@@ -515,6 +515,24 @@ OQS_API OQS_KEM *OQS_KEM_new(const char *method_name) {
 #else
 		return NULL;
 #endif	
+	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruplus_576)) {	
+#ifdef OQS_ENABLE_KEM_ntruplus_576
+		return OQS_KEM_ntruplus_576_new();
+#else
+		return NULL;
+#endif
+	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruplus_768)) {	
+#ifdef OQS_ENABLE_KEM_ntruplus_768
+		return OQS_KEM_ntruplus_768_new();
+#else
+		return NULL;
+#endif
+	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruplus_1152)) {	
+#ifdef OQS_ENABLE_KEM_ntruplus_1152
+		return OQS_KEM_ntruplus_1152_new();
+#else
+		return NULL;
+#endif
 		///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_NEW_CASE_END
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruprime_sntrup761)) {
 #ifdef OQS_ENABLE_KEM_ntruprime_sntrup761
