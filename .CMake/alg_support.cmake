@@ -219,9 +219,9 @@ cmake_dependent_option(OQS_ENABLE_SIG_uov_ov_V_pkc_skc "" ON "OQS_ENABLE_SIG_UOV
 ##### OQS_COPY_FROM_UPSTREAM_FRAGMENT_ADD_ENABLE_BY_ALG_END
 
 option(OQS_ENABLE_SIG_HAETAE "Enable haetae algorithm family" ON)
-cmake_dependent_option(OQS_ENABLE_SIG_haetae_128 "" ON "OQS_ENABLE_SIG_HAETAE" OFF)
-cmake_dependent_option(OQS_ENABLE_SIG_haetae_192 "" ON "OQS_ENABLE_SIG_HAETAE" OFF)
-cmake_dependent_option(OQS_ENABLE_SIG_haetae_256 "" ON "OQS_ENABLE_SIG_HAETAE" OFF)
+cmake_dependent_option(OQS_ENABLE_SIG_haetae128 "" ON "OQS_ENABLE_SIG_HAETAE" OFF)
+cmake_dependent_option(OQS_ENABLE_SIG_haetae192 "" ON "OQS_ENABLE_SIG_HAETAE" OFF)
+cmake_dependent_option(OQS_ENABLE_SIG_haetae256 "" ON "OQS_ENABLE_SIG_HAETAE" OFF)
 
 
 ##### OQS_COPY_FROM_LIBJADE_FRAGMENT_ADD_ENABLE_BY_ALG_START
@@ -580,37 +580,37 @@ endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Darwin|Linux")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_SIG_haetae_128_avx2 "" ON "OQS_ENABLE_SIG_haetae_128" OFF)
+    cmake_dependent_option(OQS_ENABLE_SIG_haetae128_avx2 "" ON "OQS_ENABLE_SIG_haetae128" OFF)
 endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_ARM64_V8_BUILD OR (OQS_USE_ARM_NEON_INSTRUCTIONS AND OQS_USE_ARM_NEON_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_SIG_haetae_128_aarch64 "" ON "OQS_ENABLE_SIG_haetae_128" OFF)
+    cmake_dependent_option(OQS_ENABLE_SIG_haetae128_aarch64 "" ON "OQS_ENABLE_SIG_haetae128" OFF)
 endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Darwin|Linux")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_SIG_haetae_192_avx2 "" ON "OQS_ENABLE_SIG_haetae_192" OFF)
+    cmake_dependent_option(OQS_ENABLE_SIG_haetae192_avx2 "" ON "OQS_ENABLE_SIG_haetae192" OFF)
 endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_ARM64_V8_BUILD OR (OQS_USE_ARM_NEON_INSTRUCTIONS AND OQS_USE_ARM_NEON_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_SIG_haetae_192_aarch64 "" ON "OQS_ENABLE_SIG_haetae_192" OFF)
+    cmake_dependent_option(OQS_ENABLE_SIG_haetae192_aarch64 "" ON "OQS_ENABLE_SIG_haetae192" OFF)
 endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Darwin|Linux")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_SIG_haetae_256_avx2 "" ON "OQS_ENABLE_SIG_haetae_256" OFF)
+    cmake_dependent_option(OQS_ENABLE_SIG_haetae256_avx2 "" ON "OQS_ENABLE_SIG_haetae256" OFF)
 endif()
 endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_ARM64_V8_BUILD OR (OQS_USE_ARM_NEON_INSTRUCTIONS AND OQS_USE_ARM_NEON_INSTRUCTIONS))
-    cmake_dependent_option(OQS_ENABLE_SIG_haetae_256_aarch64 "" ON "OQS_ENABLE_SIG_haetae_256" OFF)
+    cmake_dependent_option(OQS_ENABLE_SIG_haetae256_aarch64 "" ON "OQS_ENABLE_SIG_haetae256" OFF)
 endif()
 endif()
 

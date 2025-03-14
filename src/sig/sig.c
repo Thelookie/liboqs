@@ -71,9 +71,9 @@ OQS_API const char *OQS_SIG_alg_identifier(size_t i) {
 		OQS_SIG_alg_uov_ov_Ip_pkc_skc,
 		OQS_SIG_alg_uov_ov_III_pkc_skc,
 		OQS_SIG_alg_uov_ov_V_pkc_skc,///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALG_IDENTIFIER_END
-		OQS_SIG_alg_haetae_128,  ///// KPQC_SIG ALG START
-		OQS_SIG_alg_haetae_192,
-		OQS_SIG_alg_haetae_256,	
+		OQS_SIG_alg_haetae128,  ///// KPQC_SIG ALG START
+		OQS_SIG_alg_haetae192,
+		OQS_SIG_alg_haetae256,	
 	};
 	if (i >= OQS_SIG_algs_length) {
 		return NULL;
@@ -484,22 +484,22 @@ OQS_API int OQS_SIG_alg_is_enabled(const char *method_name) {
 		return 0;
 #endif
 
-	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_128)) {
-#ifdef OQS_ENABLE_SIG_haetae_128
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae128)) {
+#ifdef OQS_ENABLE_SIG_haetae128
 		return 1;
 #else
 		return 0;
 #endif	
 
-	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_192)) {
-#ifdef OQS_ENABLE_SIG_haetae_192
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae192)) {
+#ifdef OQS_ENABLE_SIG_haetae192
 		return 1;
 #else
 		return 0;
 #endif	
 
-	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_256)) {
-#ifdef OQS_ENABLE_SIG_haetae_256
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae256)) {
+#ifdef OQS_ENABLE_SIG_haetae256
 		return 1;
 #else
 		return 0;
@@ -907,23 +907,23 @@ OQS_API OQS_SIG *OQS_SIG_new(const char *method_name) {
 #else
 		return NULL;
 #endif	
-	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_128)) {
-#ifdef OQS_ENABLE_SIG_haetae_128
-		return OQS_SIG_haetae_128_new();
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae128)) {
+#ifdef OQS_ENABLE_SIG_haetae128
+		return OQS_SIG_haetae128_new();
 #else
 		return NULL;
 #endif
 
-	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_192)) {
-#ifdef OQS_ENABLE_SIG_haetae_192
-		return OQS_SIG_haetae_192_new();
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae192)) {
+#ifdef OQS_ENABLE_SIG_haetae192
+		return OQS_SIG_haetae192_new();
 #else
 		return NULL;
 #endif	
 
-	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_256)) {
-#ifdef OQS_ENABLE_SIG_haetae_256
-		return OQS_SIG_haetae_256_new();
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae256)) {
+#ifdef OQS_ENABLE_SIG_haetae256
+		return OQS_SIG_haetae256_new();
 #else
 		return NULL;
 #endif		

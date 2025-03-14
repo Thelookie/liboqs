@@ -145,9 +145,9 @@ extern "C" {
 /** Algorithm identifier for OV-V-pkc-skc */
 #define OQS_SIG_alg_uov_ov_V_pkc_skc "OV-V-pkc-skc"
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALG_IDENTIFIER_END
-#define OQS_SIG_alg_haetae_128 "Haetae-128"
-#define OQS_SIG_alg_haetae_192 "Haetae-192"
-#define OQS_SIG_alg_haetae_256 "Haetae-256"
+#define OQS_SIG_alg_haetae128 "Haetae128"
+#define OQS_SIG_alg_haetae192 "Haetae192"
+#define OQS_SIG_alg_haetae256 "Haetae256"
 // EDIT-WHEN-ADDING-SIG
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_START
 
