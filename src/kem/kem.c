@@ -51,6 +51,9 @@ OQS_API const char *OQS_KEM_alg_identifier(size_t i) {
 		OQS_KEM_alg_smaugt_128,
 		OQS_KEM_alg_smaugt_192,
 		OQS_KEM_alg_smaugt_256,	
+		OQS_KEM_alg_ntruplus_576,
+		OQS_KEM_alg_ntruplus_768,
+		OQS_KEM_alg_ntruplus_1152,	
 	};
 	if (i >= OQS_KEM_algs_length) {
 		return NULL;
@@ -255,6 +258,24 @@ OQS_API int OQS_KEM_alg_is_enabled(const char *method_name) {
 #else
 		return 0;
 #endif
+	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruplus_576)) {
+#ifdef OQS_ENABLE_KEM_ntruplus_576
+		return 1;
+#else
+		return 0;
+#endif	
+	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruplus_768)) {
+#ifdef OQS_ENABLE_KEM_ntruplus_768
+		return 1;
+#else
+		return 0;
+#endif	
+	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruplus_1152)) {
+#ifdef OQS_ENABLE_KEM_ntruplus_1152
+		return 1;
+#else
+		return 0;
+#endif		
 		///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ENABLED_CASE_END
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ntruprime_sntrup761)) {
 #ifdef OQS_ENABLE_KEM_ntruprime_sntrup761

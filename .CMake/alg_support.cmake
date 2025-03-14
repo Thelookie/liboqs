@@ -142,6 +142,11 @@ cmake_dependent_option(OQS_ENABLE_KEM_smaugt_128 "" ON "OQS_ENABLE_KEM_SMAUGT" O
 cmake_dependent_option(OQS_ENABLE_KEM_smaugt_192 "" ON "OQS_ENABLE_KEM_SMAUGT" OFF)
 cmake_dependent_option(OQS_ENABLE_KEM_smaugt_256 "" ON "OQS_ENABLE_KEM_SMAUGT" OFF)
 
+option(OQS_ENABLE_KEM_NTRUPLUS "Enable ntruplus algorithm family" ON)
+cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_576 "" ON "OQS_ENABLE_KEM_NTRUPLUS" OFF)
+cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_768 "" ON "OQS_ENABLE_KEM_NTRUPLUS" OFF) 
+cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_1152 "" ON "OQS_ENABLE_KEM_NTRUPLUS" OFF)
+
 option(OQS_ENABLE_SIG_DILITHIUM "Enable dilithium algorithm family" ON)
 cmake_dependent_option(OQS_ENABLE_SIG_dilithium_2 "" ON "OQS_ENABLE_SIG_DILITHIUM" OFF)
 cmake_dependent_option(OQS_ENABLE_SIG_dilithium_3 "" ON "OQS_ENABLE_SIG_DILITHIUM" OFF)
@@ -244,6 +249,8 @@ elseif(${OQS_ALGS_ENABLED} STREQUAL "NIST_SIG_ONRAMP")
 elseif(${OQS_ALGS_ENABLED} STREQUAL "KPQC")  
     filter_algs("KEM_paloma_128;KEM_paloma_192;KEM_paloma_256")
     filter_algs("KEM_smaugt_128;KEM_smaugt_192;KEM_smaugt_256")
+    filter_algs("KEM_ntruplus_576;KEM_ntruplus_768;KEM_ntruplus_1152")
+    
 ########ADDED KPQC  
 else()
 	message(STATUS "Alg enablement unchanged")
@@ -490,6 +497,42 @@ endif()
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
     cmake_dependent_option(OQS_ENABLE_KEM_smaugt_256_avx2 "" OFF "OQS_ENABLE_KEM_smaugt_256" ON)
+endif()
+endif()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
+if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
+    cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_576_x86_64 "" ON "OQS_ENABLE_KEM_ntruplus_576" OFF)
+endif()
+endif()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
+if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
+    cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_768_x86_64 "" ON "OQS_ENABLE_KEM_ntruplus_768" OFF)
+endif()
+endif()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
+if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
+    cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_1152_x86_64 "" ON "OQS_ENABLE_KEM_ntruplus_1152" OFF)
+endif()
+endif()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
+if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
+    cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_576_avx2 "" ON "OQS_ENABLE_KEM_ntruplus_576" OFF)
+endif()
+endif()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
+if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
+    cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_768_avx2 "" ON "OQS_ENABLE_KEM_ntruplus_768" OFF)
+endif()
+endif()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
+if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
+    cmake_dependent_option(OQS_ENABLE_KEM_ntruplus_1152_avx2 "" ON "OQS_ENABLE_KEM_ntruplus_1152" OFF)
 endif()
 endif()
 

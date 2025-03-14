@@ -163,7 +163,14 @@
 #cmakedefine OQS_ENABLE_KEM_smaugt_128_x86_64 1
 #cmakedefine OQS_ENABLE_KEM_smaugt_192_x86_64 1
 #cmakedefine OQS_ENABLE_KEM_smaugt_256_x86_64 1
-    
+
+#cmakedefine OQS_ENABLE_KEM_NTRUPLUS 1
+#cmakedefine OQS_ENABLE_KEM_ntruplus_576 1
+#cmakedefine OQS_ENABLE_KEM_ntruplus_576_avx2 1
+#cmakedefine OQS_ENABLE_KEM_ntruplus_768 1
+#cmakedefine OQS_ENABLE_KEM_ntruplus_768_avx2 1
+#cmakedefine OQS_ENABLE_KEM_ntruplus_1152 1
+#cmakedefine OQS_ENABLE_KEM_ntruplus_1152_avx2 1    
 
 #cmakedefine OQS_ENABLE_SIG_DILITHIUM 1
 #cmakedefine OQS_ENABLE_SIG_dilithium_2 1

@@ -87,7 +87,13 @@ extern "C" {
 /** Algorithm identifier for SMAUGT-192 KEM. */
 #define OQS_KEM_alg_smaugt_192 "SMAUGT-192"
 /** Algorithm identifier for SMAUGT-256 KEM. */
-#define OQS_KEM_alg_smaugt_256 "SMAUGT-256"
+#define OQS_KEM_alg_smaugt_256 "SMAUGT-256"	
+/** Algorithm identifier for NTRUPLUS-576 KEM. */
+#define OQS_KEM_alg_ntruplus_576 "NTRUPLUS-576"
+/** Algorithm identifier for NTRUPLUS-768 KEM. */
+#define OQS_KEM_alg_ntruplus_768 "NTRUPLUS-768"
+/** Algorithm identifier for NTRUPLUS-1152 KEM. */
+#define OQS_KEM_alg_ntruplus_1152 "NTRUPLUS-1152"
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALG_IDENTIFIER_END
 /** Algorithm identifier for sntruprime_sntrup761 KEM. */
 #define OQS_KEM_alg_ntruprime_sntrup761 "sntrup761"
@@ -107,7 +113,7 @@ extern "C" {
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_START
 
 /** Number of algorithm identifiers above. */
-#define OQS_KEM_algs_length 35
+#define OQS_KEM_algs_length 38
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_END
 
 /**
@@ -295,8 +301,11 @@ OQS_API void OQS_KEM_free(OQS_KEM *kem);
 #include <oqs/kem_paloma.h>
 #endif /* OQS_ENABLE_KEM_PALOMA */
 #ifdef OQS_ENABLE_KEM_SMAUGT
-#include <oqs/kem_smaugt.h>
+#include <oqs/kem_smaugt.h>	
 #endif /* OQS_ENABLE_KEM_SMAUGT */	
+#ifdef OQS_ENABLE_KEM_NTRUPLUS
+#include <oqs/kem_ntruplus.h>
+#endif /* OQS_ENABLE_KEM_NTRUPLUS */
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_INCLUDE_END
 #ifdef OQS_ENABLE_KEM_NTRUPRIME
 #include <oqs/kem_ntruprime.h>
