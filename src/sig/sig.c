@@ -71,6 +71,9 @@ OQS_API const char *OQS_SIG_alg_identifier(size_t i) {
 		OQS_SIG_alg_uov_ov_Ip_pkc_skc,
 		OQS_SIG_alg_uov_ov_III_pkc_skc,
 		OQS_SIG_alg_uov_ov_V_pkc_skc,///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALG_IDENTIFIER_END
+		OQS_SIG_alg_haetae_128,  ///// KPQC_SIG ALG START
+		OQS_SIG_alg_haetae_192,
+		OQS_SIG_alg_haetae_256,	
 	};
 	if (i >= OQS_SIG_algs_length) {
 		return NULL;
@@ -480,6 +483,27 @@ OQS_API int OQS_SIG_alg_is_enabled(const char *method_name) {
 #else
 		return 0;
 #endif
+
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_128)) {
+#ifdef OQS_ENABLE_SIG_haetae_128
+		return 1;
+#else
+		return 0;
+#endif	
+
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_192)) {
+#ifdef OQS_ENABLE_SIG_haetae_192
+		return 1;
+#else
+		return 0;
+#endif	
+
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_256)) {
+#ifdef OQS_ENABLE_SIG_haetae_256
+		return 1;
+#else
+		return 0;
+#endif		
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ENABLED_CASE_END
 	} else {
 		return 0;
@@ -882,7 +906,27 @@ OQS_API OQS_SIG *OQS_SIG_new(const char *method_name) {
 		return OQS_SIG_uov_ov_V_pkc_skc_new();
 #else
 		return NULL;
+#endif	
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_128)) {
+#ifdef OQS_ENABLE_SIG_haetae_128
+		return OQS_SIG_haetae_128_new();
+#else
+		return NULL;
 #endif
+
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_192)) {
+#ifdef OQS_ENABLE_SIG_haetae_192
+		return OQS_SIG_haetae_192_new();
+#else
+		return NULL;
+#endif	
+
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_haetae_256)) {
+#ifdef OQS_ENABLE_SIG_haetae_256
+		return OQS_SIG_haetae_256_new();
+#else
+		return NULL;
+#endif		
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_NEW_CASE_END
 		// EDIT-WHEN-ADDING-SIG
 	} else {

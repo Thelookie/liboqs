@@ -322,6 +322,18 @@
 #cmakedefine OQS_ENABLE_SIG_uov_ov_V_pkc_skc_avx2 1
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ADD_ALG_ENABLE_DEFINES_END
 
+#cmakedefine OQS_ENABLE_SIG_HAETAE 1
+#cmakedefine OQS_ENABLE_SIG_haetae_128 1
+#cmakedefine OQS_ENABLE_SIG_haetae_128_avx2 1
+#cmakedefine OQS_ENABLE_SIG_haetae_128_aarch64 1
+#cmakedefine OQS_ENABLE_SIG_haetae_192 1
+#cmakedefine OQS_ENABLE_SIG_haetae_192_avx2 1
+#cmakedefine OQS_ENABLE_SIG_haetae_192_aarch64 1    
+#cmakedefine OQS_ENABLE_SIG_haetae_256 1
+#cmakedefine OQS_ENABLE_SIG_haetae_256_avx2 1
+#cmakedefine OQS_ENABLE_SIG_haetae_256_aarch64 1
+    
+
 ///// OQS_COPY_FROM_LIBJADE_FRAGMENT_ADD_ALG_ENABLE_DEFINES_START
 
 #cmakedefine01 OQS_LIBJADE_BUILD

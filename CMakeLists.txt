@@ -278,6 +278,9 @@ endif()
 if(OQS_ENABLE_SIG_UOV)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig/uov/sig_uov.h)
 endif()
+if(OQS_ENABLE_SIG_HAETAE)
+    set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig/haetae/sig_haetae.h)
+endif()
 
 
 ##### OQS_COPY_FROM_UPSTREAM_FRAGMENT_INCLUDE_HEADERS_END
